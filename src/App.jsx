@@ -1,14 +1,29 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const decrement = () => {
+    setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
+  };
 
   return (
     <>
-      <h1>Counter App</h1>
+      <main>
+        <section>
+          <h1>Counter App</h1>
+          <h3>{count}</h3>
+          <section>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+          </section>
+        </section>
+      </main>
     </>
   );
 }

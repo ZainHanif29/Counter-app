@@ -1,0 +1,19 @@
+
+main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+section h3{
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+section section {
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    padding: 4px;
+}
